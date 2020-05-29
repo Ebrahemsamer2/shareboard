@@ -21,10 +21,12 @@ abstract class Controller
 		$view = 'views/'.get_class($this) . '/'.$this->action . '.php';
 		if($fullview)
 		{
+			// Extended Layout
 			require("views/main.php");
 		}
 		else
-		{
+		{ 
+			// Custom view without layout extended
 			require($view);
 		}
 	}

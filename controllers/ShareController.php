@@ -1,6 +1,6 @@
 <?php 
 
-class Share extends Controller
+class Shares extends Controller
 {
 	protected function index()
 	{
@@ -8,4 +8,9 @@ class Share extends Controller
 		$this->returnView($viewmodel->index(), true);
 	}
 
+	protected function add()
+	{
+		$viewmodel = new ShareModel;
+		$this->returnView($viewmodel->add(), true);
+	}
 }

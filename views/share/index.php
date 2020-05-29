@@ -1,1 +1,0 @@
-<h2>This is Share index page</h2>

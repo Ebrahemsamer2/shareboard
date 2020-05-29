@@ -2,3 +2,14 @@ body
 {
 	padding-top: 70px;
 }
+
+.btn-shares
+{
+	margin-bottom: 20px;
+}
+
+.login-form
+{
+	width: 30%;
+	margin: 50px auto;
+}

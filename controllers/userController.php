@@ -1,12 +1,18 @@
 <?php 
 
-class User extends Controller
+class Users extends Controller
 {
 
-	protected function index()
+	protected function register()
 	{
 		$viewmodel = new UserModel;
-		$this->returnView($viewmodel->index(), true);
+		$this->returnView($viewmodel->register(), true);
+	}
+
+	protected function login()
+	{
+		$viewmodel = new UserModel;
+		$this->returnView($viewmodel->login(), true);
 	}
 
 }

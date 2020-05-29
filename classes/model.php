@@ -66,12 +66,15 @@ abstract class Model
 		return $this->stmt->fetchAll();
 	}
 
-	// Some Custom DB Function
+	public function lastInsertedId()
+	{
+		return $this->pdo->lastInsertedId;
+	}
 
 	// get all rows in $table as object
 	public function getAll($table)
 	{
-		$query = "SELECT * FROM $table";
+		$query = "SELECT * FROM $table ORDER BY id DESC";
 		$this->query($query);
 		$this->execute();
 		return $this->result();
